@@ -14,3 +14,14 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model tanfolyamok {
+  id Int @id @default(autoincrement())
+  cim String
+  leiras String?
+  ar Int 
+  ora_szam Int
+  indulas_datum DateTime
+  online Boolean @default(true)
+  letrehozva DateTime @default(now())
+}
